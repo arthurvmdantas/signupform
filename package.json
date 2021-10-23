@@ -1,0 +1,31 @@
+{
+  "name": "signupform",
+  "version": "1.0.0",
+  "description": "Frontend exercise",
+  "source": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurvmdantas/signupform.git"
+  },
+  "keywords": [
+    "parcel",
+    "javascript",
+    "css",
+    "html"
+  ],
+  "author": "Arthur V. M. Dantas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arthurvmdantas/signupform/issues"
+  },
+  "homepage": "https://github.com/arthurvmdantas/signupform#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0",
+    "parcel": "^2.0.0"
+  }
+}

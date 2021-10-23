@@ -1,0 +1,12 @@
+$gray-color: hsl(0deg, 0%, 97%);
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $gray-color;
+}
