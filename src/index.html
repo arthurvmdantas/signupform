@@ -41,11 +41,14 @@
                 </div>
                 <p>or use your email for registration:</p>
                 <form class="form">
-                    <input type="text" placeholder="Name" class="form__input">
-                    <input type="email" placeholder="E-mail" class="form__input">
-                    <input type="password" placeholder="Password" class="form__input">
+                    <input type="text" placeholder="Name" class="form__input" required minlength="4" maxlength="50"
+                        title="Between 4 and 50 characters long">
+                    <input type="email" placeholder="E-mail" class="form__input" required>
+                    <input type="password" placeholder="Password" class="form__input" required pattern="\S*[A-Z]\S*"
+                        minlength="8" maxlength="16"
+                        title="Between 8 and 16 characters. Use at least one uppercase character.">
                     <div class="form__checkbox">
-                        <input type="checkbox" id="agree" checked>
+                        <input type="checkbox" id="agree" checked required>
                         <label for="agree">I agree to the <a href="#" class="link">Terms</a> and <a href="#"
                                 class="link">Privacy
                                 Policy</a></label>
