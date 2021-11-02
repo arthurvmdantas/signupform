@@ -6,11 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.scss" />
 </head>
 
 <body>
+    <div class="container">
+        <main class="card">
+            <div class="card__image-container">
 
+            </div>
+            <div class="card__content">
+                <h1 class="heading">SIGN UP WITH</h1>
+                <div class="card__icons">
+                    <div class="card__media-icon">
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="./assets/facebook_icon.svg" alt="Facebook icon">
+                        </a>
+                    </div>
+                    <div class="card__media-icon">
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="assets/instagram_icon.svg" alt="Instagram icon">
+                        </a>
+                    </div>
+                    <div class="card__media-icon">
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="assets/twitter_icon.svg" alt="Twitter icon">
+                        </a>
+                    </div>
+                </div>
+                <p>or use your email for registration:</p>
+                <form class="form">
+                    <input type="text" placeholder="Name" class="form__input">
+                    <input type="email" placeholder="E-mail" class="form__input">
+                    <input type="password" placeholder="Password" class="form__input">
+                    <div class="form__checkbox">
+                        <input type="checkbox" id="agree" checked>
+                        <label for="agree">I agree to the <a href="#" class="link">Terms</a> and <a href="#"
+                                class="link">Privacy
+                                Policy</a></label>
+                    </div>
+                    <button class="form__button">Sign Up</button>
+                </form>
+                <p><a href="#" class="link">I already have an account</a></p>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>

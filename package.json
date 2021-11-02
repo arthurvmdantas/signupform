@@ -20,12 +20,14 @@
   ],
   "author": "Arthur V. M. Dantas",
   "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "bugs": {
     "url": "https://github.com/arthurvmdantas/signupform/issues"
   },
   "homepage": "https://github.com/arthurvmdantas/signupform#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0",
+    "autoprefixer": "^10.4.0",
     "parcel": "^2.0.0"
   }
 }
