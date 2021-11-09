@@ -41,17 +41,18 @@
                 <p>or use your email for registration:</p>
                 <form class="form" id="form">
                     <input id="name" type="text" placeholder="Name" class="form__input" required minlength="4"
-                        maxlength="50">
+                        maxlength="50" title="Must be between 4 and 50 characters">
                     <input id="email" type="email" placeholder="E-mail" class="form__input" required>
                     <input id="password" type="password" placeholder="Password" class="form__input" required
-                        pattern="\S*[A-Z]\S*" minlength="8" maxlength="16">
+                        pattern="\S*[A-Z]\S*" minlength="8" maxlength="16"
+                        title="Must be between 8 and 16 characters with at least one capital letter">
                     <div class="form__checkbox">
                         <input type="checkbox" id="agree" checked required>
                         <label for="agree">I agree to the <a href="#" class="link">Terms</a> and <a href="#"
                                 class="link">Privacy
                                 Policy</a></label>
                     </div>
-                    <button class="form__button">Sign Up</button>
+                    <button class="form__button" disabled id="btnSubmit">Sign Up</button>
                 </form>
                 <p><a href="#" class="link">I already have an account</a></p>
             </div>

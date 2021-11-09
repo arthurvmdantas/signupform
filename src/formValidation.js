@@ -12,16 +12,23 @@ const nameElement = document.getElementById("name");
 const emailElement = document.getElementById("email");
 const passwordElement = document.getElementById("password");
 const agreeElement = document.getElementById("agree");
+const btnSubmitElement = document.getElementById("btnSubmit");
 const formElement = document.getElementById("form");
 
-// remove custom error
-function removeError(e) {
+function checkInput(e) {
     if (e.target.checkValidity())
         e.target.setCustomValidity("");
+
+    // check all elements validity
+    if (nameElement.validity.valid && emailElement.validity.valid
+        && passwordElement.validity.valid && agreeElement.validity.valid)
+        btnSubmitElement.disabled = false;
+    else
+        btnSubmitElement.disabled = true;
 }
 
 /* VALIDATING NAME */
-nameElement.addEventListener('input', removeError);
+nameElement.addEventListener('input', checkInput);
 nameElement.addEventListener('invalid', () => {
     const e = nameElement;
 
@@ -34,7 +41,7 @@ nameElement.addEventListener('invalid', () => {
 });
 
 /* VALIDATING EMAIL */
-emailElement.addEventListener('input', removeError);
+emailElement.addEventListener('input', checkInput);
 emailElement.addEventListener('invalid', () => {
     const e = emailElement;
 
@@ -47,7 +54,7 @@ emailElement.addEventListener('invalid', () => {
 });
 
 /* VALIDATING PASSWORD */
-passwordElement.addEventListener('input', removeError);
+passwordElement.addEventListener('input', checkInput);
 passwordElement.addEventListener('invalid', () => {
     const e = passwordElement;
 
@@ -62,9 +69,13 @@ passwordElement.addEventListener('invalid', () => {
 });
 
 /* VALIDATING CHECKBOX */
+agreeElement.addEventListener('input', checkInput);
 agreeElement.addEventListener('invalid', () => {
     const e = agreeElement;
-    e.setCustomValidity(messages.agree);
+    if (e.validity.valueMissing)
+        e.setCustomValidity(messages.agree);
+    else
+        e.setCustomValidity("");
 })
 
 formElement.addEventListener('submit', e => {
