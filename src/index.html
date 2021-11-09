@@ -8,10 +8,9 @@
     <title>Sign Up Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.scss" />
+    <script src="formValidation.js" defer></script>
 </head>
 
 <body>
@@ -40,13 +39,12 @@
                     </div>
                 </div>
                 <p>or use your email for registration:</p>
-                <form class="form">
-                    <input type="text" placeholder="Name" class="form__input" required minlength="4" maxlength="50"
-                        title="Between 4 and 50 characters long">
-                    <input type="email" placeholder="E-mail" class="form__input" required>
-                    <input type="password" placeholder="Password" class="form__input" required pattern="\S*[A-Z]\S*"
-                        minlength="8" maxlength="16"
-                        title="Between 8 and 16 characters. Use at least one uppercase character.">
+                <form class="form" id="form">
+                    <input id="name" type="text" placeholder="Name" class="form__input" required minlength="4"
+                        maxlength="50">
+                    <input id="email" type="email" placeholder="E-mail" class="form__input" required>
+                    <input id="password" type="password" placeholder="Password" class="form__input" required
+                        pattern="\S*[A-Z]\S*" minlength="8" maxlength="16">
                     <div class="form__checkbox">
                         <input type="checkbox" id="agree" checked required>
                         <label for="agree">I agree to the <a href="#" class="link">Terms</a> and <a href="#"
