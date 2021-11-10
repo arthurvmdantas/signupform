@@ -33,11 +33,12 @@ function checkInput(e) {
         e.target.classList.add('invalid');
 
     // check validity of all form's elements
-    if (nameElement.validity.valid && emailElement.validity.valid
+    // it can be used to disable the button if validation fails
+    /*if (nameElement.validity.valid && emailElement.validity.valid
         && passwordElement.validity.valid && agreeElement.validity.valid)
         btnSubmitElement.disabled = false;
     else
-        btnSubmitElement.disabled = true;
+        btnSubmitElement.disabled = true;*/
 }
 
 /* VALIDATING NAME */
