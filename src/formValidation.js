@@ -15,11 +15,24 @@ const agreeElement = document.getElementById("agree");
 const btnSubmitElement = document.getElementById("btnSubmit");
 const formElement = document.getElementById("form");
 
+function checkValidityOutline(e) {
+    if (e.target.checkValidity())
+        e.target.classList.remove('invalid');
+    else
+        e.target.classList.add('invalid');
+}
+
 function checkInput(e) {
     if (e.target.checkValidity())
         e.target.setCustomValidity("");
 
-    // check all elements validity
+    // toggle invalid class
+    if (e.target.validity.valid)
+        e.target.classList.remove('invalid');
+    else
+        e.target.classList.add('invalid');
+
+    // check validity of all form's elements
     if (nameElement.validity.valid && emailElement.validity.valid
         && passwordElement.validity.valid && agreeElement.validity.valid)
         btnSubmitElement.disabled = false;
@@ -29,6 +42,8 @@ function checkInput(e) {
 
 /* VALIDATING NAME */
 nameElement.addEventListener('input', checkInput);
+nameElement.addEventListener('focus', checkValidityOutline);
+nameElement.addEventListener('focusout', checkValidityOutline);
 nameElement.addEventListener('invalid', () => {
     const e = nameElement;
 
@@ -42,6 +57,8 @@ nameElement.addEventListener('invalid', () => {
 
 /* VALIDATING EMAIL */
 emailElement.addEventListener('input', checkInput);
+emailElement.addEventListener('focus', checkValidityOutline);
+emailElement.addEventListener('focusout', checkValidityOutline);
 emailElement.addEventListener('invalid', () => {
     const e = emailElement;
 
@@ -55,6 +72,8 @@ emailElement.addEventListener('invalid', () => {
 
 /* VALIDATING PASSWORD */
 passwordElement.addEventListener('input', checkInput);
+passwordElement.addEventListener('focus', checkValidityOutline);
+passwordElement.addEventListener('focusout', checkValidityOutline);
 passwordElement.addEventListener('invalid', () => {
     const e = passwordElement;
 
