@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,13 @@
   "bugs": {
     "url": "https://github.com/arthurvmdantas/signupform/issues"
   },
-  "homepage": "https://github.com/arthurvmdantas/signupform#readme",
+  "homepage": "https://arthurvmdantas.github.io/signupform",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0",
     "autoprefixer": "^10.4.0",
     "parcel": "^2.0.0"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
