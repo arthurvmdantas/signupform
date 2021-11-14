@@ -1,6 +1,6 @@
 # Frontend exercise: Sign Up Form
 
-Live Site URL: [https://arthurvmdantas.github.io/signupform/]()
+Live Site URL: [https://arthurvmdantas.github.io/signupform/](https://arthurvmdantas.github.io/signupform/)
 
 ![Screen](./media/signup-screen.jpeg)
 
